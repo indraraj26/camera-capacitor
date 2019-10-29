@@ -8,6 +8,7 @@ import {
 import { ImagePicker } from '@ionic-native/image-picker/ngx';
 import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
 
+declare const window: any;
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -130,5 +131,16 @@ export class HomePage {
             this.androidPermissions.PERMISSION.WRITE_EXTERNAL_STORAGE,
           ),
       );
+  }
+  onToggleFlashlight() {
+    window.plugins.flashlight.toggle(
+      suc => {
+        console.log(suc, 'success');
+      }, // optional success callback
+      err => {
+        console.log(err, 'error');
+      }, // optional error callback
+      { intensity: 0.3 }, // optional as well, used on iOS when switching on
+    );
   }
 }

@@ -6,6 +6,10 @@
     <param name="android-package" value="com.android.plugins.Permissions"/>
   </feature>
 
+  <feature name="Flashlight">
+    <param name="android-package" value="nl.xservices.plugins.Flashlight"/>
+  </feature>
+
   <feature name="ImagePicker">
     <param name="android-package" value="com.synconset.ImagePicker"/>
   </feature>
