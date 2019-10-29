@@ -1,7 +1,8 @@
 {
   "name": "cap-exp",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }
